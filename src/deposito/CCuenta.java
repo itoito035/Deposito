@@ -1,7 +1,4 @@
-/*
- * 
- * 
- */
+
 package deposito;
 
 /**
@@ -65,6 +62,13 @@ public class CCuenta {
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
     }
+    /**
+	 * Constructor que inicializa los parametros de clase de las cuentas
+	 * @param sNombre Nombre del titular
+	 * @param sCuenta Cuenta numero identificador de la cuenta 
+	 * @param dSaldo Saldo de la cuenta
+         * @param dTipoInteres Tipo de interes de la cuenta
+	 */
    
     private String nombre;
     private String cuenta;
@@ -81,11 +85,19 @@ public class CCuenta {
         cuenta=cue;
         saldo=sal;
     }
+    /**
+	 * Inicia la consulta del estado de la cuenta
+	 * @return Saldo Saldo actual de la cuenta
+	 */
 
     public double estado()
     {
         return getSaldo();
     }
+    /**
+	 * Inicia la operacion de ingreso en la cuenta
+	 * @param dCantidad Cantidad a ingresar en la cuenta
+	 */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -93,6 +105,10 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");
         setSaldo(getSaldo() + cantidad);
     }
+    /**
+	 * Inicia la operacion de retirada en la cuenta
+	 * @param dCantidad Cantidad a retirar en la cuenta
+	 */
 
     public void retirar(double cantidad) throws Exception
     {

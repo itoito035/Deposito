@@ -1,17 +1,11 @@
-/*
- * 
- * 
- */
+
 package deposito;
 /**
- *
+ * Implementa el inicio del programa.La operaciones que se realizan son ingresar y retirar.
  * @author milagrosangulo
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         operativa_cuenta();
@@ -21,7 +15,7 @@ public class Main {
         operativa_cuenta(0);
     }
 
-    public static void operativa_cuenta(float cuentas) {
+    public static void operativa_cuenta(float cantidad) {
         CCuenta cuenta1;
         double saldoActual;
 
