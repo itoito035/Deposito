@@ -2,14 +2,15 @@
 package deposito;
 
 /**
- *
+ * Clase con que realiza las operaciones del menú
  * @author milagrosangulo
  */
 public class CCuenta {
 
-    /**
-     * @return the nombre
-     */
+   /**
+   * Método que devuelve el titular de la cuenta
+   * @return  nombre  del titular
+   */
     public String getNombre() {
         return nombre;
     }
@@ -21,9 +22,10 @@ public class CCuenta {
         this.nombre = nombre;
     }
 
-    /**
-     * @return the cuenta
-     */
+   /**
+   * Método que devuelve el numero de la cuenta
+   * @return  cuenta  
+   */
     public String getCuenta() {
         return cuenta;
     }
@@ -35,9 +37,10 @@ public class CCuenta {
         this.cuenta = cuenta;
     }
 
-    /**
-     * @return the saldo
-     */
+   /**
+   * Método get que devuelve el saldo de la cuenta
+   * @return saldo Saldo pendiente en la cuenta
+   */
     public double getSaldo() {
         return saldo;
     }
@@ -50,7 +53,8 @@ public class CCuenta {
     }
 
     /**
-     * @return the tipoInterés
+     * Método get que devuelve el tipo de interés de la cuenta
+     * @return tipoInterés
      */
     public double getTipoInterés() {
         return tipoInterés;
@@ -63,17 +67,13 @@ public class CCuenta {
         this.tipoInterés = tipoInterés;
     }
     /**
-	 * Constructor que inicializa los parametros de clase de las cuentas
-	 * @param sNombre Nombre del titular
-	 * @param sCuenta Cuenta numero identificador de la cuenta 
-	 * @param dSaldo Saldo de la cuenta
-         * @param dTipoInteres Tipo de interes de la cuenta
-	 */
+     * Constructor que inicializa los parametros de clase de las cuentas 
+     */
    
-    private String nombre;
-    private String cuenta;
-    private double saldo;
-    private double tipoInterés;
+    private String nombre;//Nombre del titular
+    private String cuenta;//Cuenta numero identificador de la cuenta
+    private double saldo;//Saldo de la cuenta
+    private double tipoInterés;//Tipo de interes de la cuenta
 
     public CCuenta()
     {
@@ -86,18 +86,18 @@ public class CCuenta {
         saldo=sal;
     }
     /**
-	 * Inicia la consulta del estado de la cuenta
-	 * @return Saldo Saldo actual de la cuenta
-	 */
+     * Inicia la consulta del estado de la cuenta
+     * @return Saldo Saldo actual de la cuenta
+     */
 
     public double estado()
     {
         return getSaldo();
     }
     /**
-	 * Inicia la operacion de ingreso en la cuenta
-	 * @param dCantidad Cantidad a ingresar en la cuenta
-	 */
+     * Inicia la operacion de ingreso en la cuenta
+     * @param cantidad Cantidad a ingresar en la cuenta
+     */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -106,9 +106,9 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
     /**
-	 * Inicia la operacion de retirada en la cuenta
-	 * @param dCantidad Cantidad a retirar en la cuenta
-	 */
+     * Inicia la operacion de retirada en la cuenta
+     * @param cantidad Cantidad a retirar en la cuenta
+     */
 
     public void retirar(double cantidad) throws Exception
     {
