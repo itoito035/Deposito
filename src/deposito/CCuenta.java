@@ -75,10 +75,20 @@ public class CCuenta {
     private double saldo;//Saldo de la cuenta
     private double tipoInterés;//Tipo de interes de la cuenta
 
+    /**
+     *
+     */
     public CCuenta()
     {
     }
 
+    /**
+     *
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -97,6 +107,7 @@ public class CCuenta {
     /**
      * Inicia la operacion de ingreso en la cuenta
      * @param cantidad Cantidad a ingresar en la cuenta
+     * @throws java.lang.Exception
      */
 
     public void ingresar(double cantidad) throws Exception
@@ -108,6 +119,7 @@ public class CCuenta {
     /**
      * Inicia la operacion de retirada en la cuenta
      * @param cantidad Cantidad a retirar en la cuenta
+     * @throws java.lang.Exception
      */
 
     public void retirar(double cantidad) throws Exception
